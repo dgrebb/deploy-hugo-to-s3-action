@@ -1,6 +1,6 @@
 name: 'Deploy Hugo to S3'
 description: 'Build and deploy Hugo static websites to AWS S3'
-author: 'AlbertMorenoDEV'
+author: 'dgrebb'
 branding:
   icon: package
   color: yellow

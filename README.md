@@ -9,9 +9,9 @@ name: Hugo Build and Deploy to S3
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@master
       
       - name: Build and deploy
-        uses: AlbertMorenoDEV/deploy-hugo-to-s3-action@v0.0.3
+        uses: dgrebb/deploy-hugo-to-s3-action@v0.0.4
         with:
           hugo-version: 0.85.0
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -44,9 +44,7 @@ name: Hugo Build and Deploy to S3
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -57,7 +55,7 @@ jobs:
         uses: actions/checkout@master
       
       - name: Build and deploy
-        uses: AlbertMorenoDEV/deploy-hugo-to-s3-action@v0.0.3
+        uses: dgrebb/deploy-hugo-to-s3-action@v0.0.4
         with:
           hugo-version: 0.85.0
           target: production
